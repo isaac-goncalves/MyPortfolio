@@ -7,7 +7,7 @@ import Header from '../Header';
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Header/>
+      <Header />
       <main className={styles.main}>
         <div className={styles.content}>
           <div className={styles.profile}>
@@ -54,7 +54,7 @@ export default function Home() {
                     symbol: '',
                     color: 'rgb(69 121 255)'
                   }
-                }} percent={67} />
+                }} percent={75} />
               </li>
               <li className={styles.percent}>
                 <strong>Backend</strong>
@@ -63,7 +63,7 @@ export default function Home() {
                     symbol: '',
                     color: 'rgb(69 121 255)'
                   }
-                }} percent={88} />
+                }} percent={65} />
               </li>
               <li className={styles.percent}>
                 <strong>Web</strong>
@@ -81,7 +81,7 @@ export default function Home() {
                     symbol: '',
                     color: 'rgb(69 121 255)'
                   }
-                }} percent={35} />
+                }} percent={25} />
               </li>
               <li className={styles.percent}>
                 <strong>Desktop</strong>
@@ -97,16 +97,19 @@ export default function Home() {
           </div>
           <div className={styles.avatarWrapper}>
             <img className={styles.avatar} src='/avatar.png' />
-            <a className={styles.downloadCVButton}>Download CV</a>
+            <a 
+            href="/Curriculos/Curiculo_Isaac_Correia_Gonçalves_v2.6.docx" 
+            download="Isaac Correia Gonçalves - Curriculo.docx" 
+            className={styles.downloadCVButton}>DOWNLOAD CV
+            </a>
             <img className={styles.backGroundImg} src='/developer.svg' />
           </div>
-
-
         </div>
       </main>
+      <a className={styles.mailAddress}>isaac.correia.2406@gmail.com</a>
       <footer className={styles.footer}>
         <a>
-          Powered by ISAAC
+          Powered by Isaac with
         </a>
       </footer>
     </div>
