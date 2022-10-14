@@ -6,16 +6,16 @@
 /* make two colums in the same row */
 
 .content {
-  margin-top: -10rem;
-  display: grid;
+  display: flex;
+  flex-direction: row;
   margin-left: 4rem;
-  grid-template-columns:  1fr 1fr 1fr;
+  margin-right: 4rem; 
  
 }
 .profile {
   flex: 1 1 100%;
   width: 300px;
-  margin: 0 0 2rem 0;
+  margin: 0 1rem 2rem 0;
   
   h3{
     letter-spacing: 0.2rem;
@@ -24,13 +24,16 @@
 .skills {
   flex: 1 1 100%;
   width: 300px;
-  margin: 0 0 1rem 0;
+  margin: 0 1rem 1rem 0;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 
+  //list on the same line as text
   li {
     margin: 0.5rem 0;
+    margin-left: -40px;
     list-style: none;
+    list-style-position: inside;
     letter-spacing: 0.2rem;
   }
 

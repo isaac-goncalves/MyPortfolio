@@ -109,7 +109,7 @@ export default function Home() {
       <a className={styles.mailAddress}>isaac.correia.2406@gmail.com</a>
       <footer className={styles.footer}>
         <a>
-          Powered by Isaac with
+          Powered by Isaac
         </a>
       </footer>
     </div>
