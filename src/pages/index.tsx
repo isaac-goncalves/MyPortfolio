@@ -4,6 +4,8 @@ import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
 import Header from '../Header';
 
+import Projects from './Projects';
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -105,6 +107,7 @@ export default function Home() {
             <img className={styles.backGroundImg} src='/developer.svg' />
           </div>
         </div>
+        <Projects/>
       </main>
       <a className={styles.mailAddress}>isaac.correia.2406@gmail.com</a>
       <footer className={styles.footer}>

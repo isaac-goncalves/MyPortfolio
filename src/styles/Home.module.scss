@@ -96,7 +96,8 @@
     margin-bottom: 1rem;
     width: 250px;
     height: 250px;
-    border-radius: 200px;
+    border-radius: 999999999rem;
+    border: 4px solid #eaeaea;
   }
 
   .downloadCVButton {
