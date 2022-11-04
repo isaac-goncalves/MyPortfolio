@@ -130,15 +130,4 @@
 }
 
 
-.mailAddress{
-  writing-mode: vertical-rl;
-  position: absolute;
-  letter-spacing: 0.2rem;
-  right: 2rem;
-  bottom: 200px;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: rgb(100, 255, 218);
 
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-}

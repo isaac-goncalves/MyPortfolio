@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.scss'
 import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
 import Header from '../Header';
+import MediaLinks from '../MediaLinks';
 
 import Projects from './Projects';
 
@@ -108,8 +109,8 @@ export default function Home() {
           </div>
         </div>
         <Projects/>
+        <MediaLinks/>
       </main>
-      <a className={styles.mailAddress}>isaac.correia.2406@gmail.com</a>
       <footer className={styles.footer}>
         <a>
           Powered by Isaac
