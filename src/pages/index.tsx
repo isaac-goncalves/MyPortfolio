@@ -101,7 +101,7 @@ export default function Home() {
           <div className={styles.avatarWrapper}>
             <img className={styles.avatar} src='/avatar.png' />
             <a 
-            href="/Curriculos/Curiculo_Isaac_Correia_Gonçalves_v2.6.docx" 
+            href="\Curriculos\Curiculo_Isaac_Correia_Gonçalves_v2.6.pdf" 
             download="Isaac Correia Gonçalves - Curriculo.docx" 
             className={styles.downloadCVButton}>DOWNLOAD CV
             </a>
