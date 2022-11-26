@@ -3,19 +3,16 @@ import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
 import Header from '../Header';
 import MediaLinks from '../MediaLinks';
-import { Link } from "react-scroll";
-
 import Projects from './Projects';
 
 export default function Home() {
 
   return (
     <div className={styles.container}>
-      <div id="startSection">
-      </div>
-      <Header
+        <Header
       />
       <main className={styles.main}>
+      <div className={`${styles.startSection} startSection`}>
         <div className={styles.content}>
           <div className={styles.profile}>
             <h3>
@@ -63,9 +60,21 @@ export default function Home() {
                   }
                 }} percent={75} />
               </li>
+              <li className={styles.percent}>
+                <strong>Typescript</strong>
+                <Progress theme={{
+                  active: {
+                    symbol: '',
+                    color: 'rgb(69 121 255)'
+                  }
+                }} percent={75} />
+              </li>
+              
+              </ul>
               <h3>
                 SKILLS
               </h3>
+              <ul>
               <li className={styles.percent}>
                 <strong>FrontEnd</strong>
                 <Progress theme={{
@@ -102,7 +111,7 @@ export default function Home() {
                   }
                 }} percent={25} />
               </li>
-              <li className={styles.percent}>
+              {/* <li className={styles.percent}>
                 <strong>Desktop</strong>
                 <Progress theme={{
                   active: {
@@ -110,7 +119,7 @@ export default function Home() {
                     color: 'rgb(69 121 255)'
                   }
                 }} percent={10} />
-              </li>
+              </li> */}
             </ul>
 
           </div>
@@ -124,11 +133,12 @@ export default function Home() {
             <img className={styles.backGroundImg} src='/developer.svg' />
           </div>
         </div>
-        <div id="projectsSection">
+        </div>
+        <div className="projectsSection">
           <Projects />
         </div>
         <MediaLinks />
-        <div id="contactSection">TEste</div>
+        <div className="contactSection">TEste</div>
 
       </main>
       <footer className={styles.footer}>
