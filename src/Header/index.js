@@ -12,14 +12,14 @@ export default function Header() {
             <div className={styles.headerContent}>
                 <nav>
                     <Link
-                      
+                        className={styles.link}
                         activeClass={styles.active}
                         smooth spy to="startSection"
                     >
                         Inicio
                     </Link>
                     <Link
-                        
+                        className={styles.link}
                         activeClass={styles.active}
                         smooth spy to="projectsSection"
                     >
@@ -27,7 +27,7 @@ export default function Header() {
                     </Link>
 
                     <Link 
-                  
+                  className={styles.link}
                     activeClass={styles.active}
                         smooth spy to="contactSection"
                     >
