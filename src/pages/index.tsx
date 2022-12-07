@@ -65,7 +65,7 @@ export default function Home() {
                     theme={{
                       active: {
                         symbol: "",
-                        color: "rgb(143 53 53)",
+                        color: "rgb(143 53 53 )",
                       },
                     }}
                     percent={75}
@@ -77,7 +77,7 @@ export default function Home() {
                     theme={{
                       active: {
                         symbol: "",
-                        color: "rgb(143 53 53)",
+                        color: "rgb(143 53 53 )",
                       },
                     }}
                     percent={65}
@@ -89,7 +89,7 @@ export default function Home() {
                     theme={{
                       active: {
                         symbol: "",
-                        color: "rgb(143 53 53)",
+                        color: "rgb(143 53 53 )",
                       },
                     }}
                     percent={25}
@@ -101,7 +101,7 @@ export default function Home() {
                     theme={{
                       active: {
                         symbol: "",
-                        color: "rgb(143 53 53)",
+                        color: "rgb(143 53 53 )",
                       },
                     }}
                     percent={70}
@@ -113,7 +113,7 @@ export default function Home() {
                     theme={{
                       active: {
                         symbol: "",
-                        color: "rgb(143 53 53)",
+                        color: "rgb(143 53 53 )",
                       },
                     }}
                     percent={25}
@@ -128,7 +128,7 @@ export default function Home() {
                     theme={{
                       active: {
                         symbol: "",
-                        color: "rgb(255 163 69)",
+                        color: "rgb(255 163 69 / 70%)",
                       },
                     }}
                     percent={95}
@@ -140,7 +140,7 @@ export default function Home() {
                     theme={{
                       active: {
                         symbol: "",
-                        color: "rgb(255 163 69)",
+                        color: "rgb(255 163 69 / 70%)",
                       },
                     }}
                     percent={85}
