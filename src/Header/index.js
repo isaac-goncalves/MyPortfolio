@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from "./styles.module.scss";
 
-
+import Image from 'next/image';
 
 import { Link } from "react-scroll";
 
@@ -11,6 +11,8 @@ export default function Header() {
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
                 <nav>
+                    <Image className={styles.avatar} width="350px"
+                        height="300px" src="/logo.jpg" />
                     <Link
                         className={styles.link}
                         activeClass={styles.active}
@@ -26,9 +28,9 @@ export default function Header() {
                         Projetos
                     </Link>
 
-                    <Link 
-                  className={styles.link}
-                    activeClass={styles.active}
+                    <Link
+                        className={styles.link}
+                        activeClass={styles.active}
                         smooth spy to="contactSection"
                     >
                         Contato
