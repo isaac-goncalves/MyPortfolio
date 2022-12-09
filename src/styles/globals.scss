@@ -18,12 +18,14 @@ body {
 
   --cian-500: #61dafb;
   --yellow-500: #eba417;
+  color-scheme: light dark; /* both supported */
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
 
 * {
   box-sizing: border-box;

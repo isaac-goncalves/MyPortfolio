@@ -165,7 +165,7 @@ export default function Home() {
           <Projects />
         </div>
         <MediaLinks />
-        <div className="contactSection">TEste</div>
+        <div className="contactSection"></div>
       </main>
       <footer className={styles.footer}>
         <a>Powered by Isaac</a>

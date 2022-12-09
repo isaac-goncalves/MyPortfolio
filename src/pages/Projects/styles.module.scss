@@ -1,4 +1,22 @@
+.title {
+    margin-top: 7rem;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    padding-top: 2rem; ;
+    border-top:    2px solid;
+    width: 60rem;
+    }
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    }
+
+.projectsContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
