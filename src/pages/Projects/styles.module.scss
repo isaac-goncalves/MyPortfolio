@@ -1,11 +1,11 @@
 .title {
     margin-top: 7rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     letter-spacing: 0.4rem;
     text-transform: uppercase;
     padding-top: 2rem; ;
-    border-top:    2px solid;
+    border-top:  1px solid var(--gray-800) ;
     width: 60rem;
     }
 .container {
@@ -49,10 +49,14 @@
         font-weight: 600;
         margin: 1rem 1rem;
         text-align: center;
+        letter-spacing: 0.4rem;
     }    
 
     p  {
         padding: 1rem;
+        font-family: Consolas;
+        font-size: 1rem;
+        text-justify: auto;
         //center text on div
         text-align: center;
     }
