@@ -17,7 +17,7 @@ export default function index() {
                     src={project1}
                     />
                     <h1>Circle Test</h1>
-                    <p>Projeto desenvolvido em React para demonstrar o funcionamento de um botão de Fazer Desfazer e um de fazer</p>
+                    <p>Projeto desenvolvido em React para demonstrar o funcionamento de um botão de <strong>UNDO</strong> e um de <strong>REDO</strong></p>
                 </a>
                 <div className={styles.project}>
                     <img src="https://img.freepik.com/premium-photo/abstract-technology-binary-code-background_34629-592.jpg" alt="" />

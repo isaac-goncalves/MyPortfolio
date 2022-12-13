@@ -55,15 +55,15 @@ function App() {
   return (
     <div className={styles.App}>
       {" "}
-      <h1 className={styles.h1}>Clique em qualquer lugar para criar um circulo</h1>
+      <h1 className={styles.h1}>Clique para criar um circulo</h1>
       <div onClick={createCircle} className={styles.circle}>
         <svg width="100%" height="100%">
           {circles}
         </svg>
+      </div>
       <div className={styles.buttons}>
       <button className={styles.button} onClick={deleteCircle}>Undo</button>
       <button className={styles.button} onClick={restoreCircle}>Redo</button>
-      </div>
       </div>
     </div>
   );
