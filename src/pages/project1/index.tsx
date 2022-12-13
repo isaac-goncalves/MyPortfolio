@@ -7,6 +7,7 @@ function App() {
   const [circles, setCircles] = useState([]);
 
   const [deletedCircles, setDeletedCircles] = useState([]);
+
   const getClickPosition = (e) => {
     const dim = e.target.getBoundingClientRect();
     const X = e.clientX - dim.left;
@@ -37,14 +38,14 @@ function App() {
     console.log(X);
     let newCircle = (
       <circle
-        className="circle"
+        className="circle-style"
         key={Math.random()}
         cx={X}
         cy={Y}
-        r="10"
-        stroke="black"
-        strokeWidth="1"
-        fill={randomcolor()}
+        r="20"
+        stroke={randomcolor()}
+        strokeWidth="5"
+        
       />
     );
     let allCircles = [...circles, newCircle];

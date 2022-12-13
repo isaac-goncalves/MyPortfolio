@@ -19,18 +19,21 @@
 
   h3 {
     letter-spacing: 0.2rem;
+    font-size: 1.25rem;
   }
 }
 .skills {
   flex: 1 1 100%;
-  font-size: 0.75rem;
   width: 300px;
   margin: 0 1rem 1rem 0;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 
   //list on the same line as text
+  
+
   li {
+    font-size: 0.75rem;
     margin: 0.5rem 0;
     margin-left: -40px;
     list-style: none;
