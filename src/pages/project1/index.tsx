@@ -45,7 +45,6 @@ function App() {
         r="20"
         stroke={randomcolor()}
         strokeWidth="5"
-        
       />
     );
     let allCircles = [...circles, newCircle];
@@ -55,9 +54,8 @@ function App() {
 
   return (
     <div className={styles.App}>
-      {" "}
-      <h1 className={styles.h1}>Clique para criar um circulo</h1>
-      <div onClick={createCircle} className={styles.circle}>
+      <h1 className={styles.h1}>Clique para criar um círculo</h1>
+      <div onClick={createCircle} className={styles.circle_area}>
         <svg width="100%" height="100%">
           {circles}
         </svg>
@@ -66,6 +64,9 @@ function App() {
       <button className={styles.button} onClick={deleteCircle}>Undo</button>
       <button className={styles.button} onClick={restoreCircle}>Redo</button>
       </div>
+      <a href="/">
+      <button className={styles.home_button}>Voltar para pagina inicial</button>
+      </a>
     </div>
   );
 }
