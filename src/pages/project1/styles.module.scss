@@ -1,7 +1,3 @@
-// body {
-//   background-color: #000;
-// }
-
 .App {
   text-align: center;
   display: flex;
@@ -43,12 +39,12 @@
 }
 
 .home_button{
-  background-color: #FFF;
-  border : 1px solid #000;
+  background-color: #000;
+  border : 1px solid #FFF;
   font-size: 1.25rem;
   font-weight: bold;
   font-family: Consolas;
-  color: #000;
+  color: #FFF;
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
