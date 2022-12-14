@@ -33,16 +33,29 @@
 .project {
   display: flex;
   flex-direction: column;
-  border: 2px solid #e1e1e1;
+  
   border-radius: 5px;
+  overflow: hidden;
   margin: 2rem 0;
   max-width: 340px;
-  
-  img {
-    width: 100%;
-    //rounded corners
-    border-radius: 5px;
-  }
+  background-color: hsla(0, 100%, 100%, 0.07);
+  box-shadow:
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  0px 2px 2px 0px hsla(0,0%,0%,0.14), 
+  0px 3px 1px -2px hsla(0,0%,0%,0.12), 
+  0px 1px 5px 0px hsla(0,0%,0%,0.2);
+
+    transition: all 0.2s;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow:
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+        0px 2px 2px 0px hsla(0,0%,0%,0.14), 
+        0px 3px 1px -2px hsla(0,0%,0%,0.12), 
+        0px 1px 5px 0px hsla(0,0%,0%,0.2);
+        }
+
 
   h1 {
     font-size: 1.5rem;
@@ -62,9 +75,16 @@
   }
 
   .badge {
-    height: auto;
-    width: 80px;
-    margin: 0.5rem;
-    align-items: flex-end;
+    height: 24px;
+    margin: 0.25rem;
+    align-self: center;
+}
+.badges_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: auto;
   }
 }
