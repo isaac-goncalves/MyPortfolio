@@ -3,7 +3,7 @@ import { Progress } from "react-sweet-progress";
 import "react-sweet-progress/lib/style.css";
 import Header from "../Header";
 import MediaLinks from "../MediaLinks";
-import Projects from "./Projects";
+import Projects from "./projects";
 
 export default function Home() {
   return (
