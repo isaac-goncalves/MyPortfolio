@@ -28,9 +28,8 @@ export default function index() {
                             src="https://img.shields.io/badge/-Saas-Bf4080?logo=sass&logoColor=white&style=for-the-badge"
                         />
                     </div>
-
                 </a>
-                <a className={styles.project}>
+                <a href="./project2" className={styles.project}>
                     <Image
                         height={500}
                         src={project2}
