@@ -65,7 +65,7 @@ function App() {
       <button className={styles.button} onClick={restoreCircle}>Redo</button>
       </div>
       <a href="/">
-      <button className={styles.home_button}>Voltar à pagina inicial</button>
+      <button className={styles.home_button}>Voltar para pagina inicial</button>
       </a>
     </div>
   );
