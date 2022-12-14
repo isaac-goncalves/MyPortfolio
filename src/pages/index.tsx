@@ -16,7 +16,10 @@ export default function Home() {
               <h3>PERFIL</h3>
               <p>
                 Programador dedicado, comunicativo, focado, autodidata, curioso
-                e persistente. Tenho estudado o ecossistema JavaScript pelos
+                e persistente.
+              </p>
+              <p>
+                Tenho estudado o ecossistema JavaScript pelos
                 últimos 2 anos e estou à procura de uma oportunidade de trabalho
                 em desenvolvimento Web Backend.
               </p>
