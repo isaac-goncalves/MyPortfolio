@@ -4,6 +4,13 @@ import "react-sweet-progress/lib/style.css";
 import Header from "../Header";
 import MediaLinks from "../MediaLinks";
 import Projects from "./projects";
+import Link from "next/link";
+
+import Image from "next/image";
+
+import avatar from "public/avatar.png";
+
+import image from "public/developer.svg";
 
 export default function Home() {
   return (
@@ -19,9 +26,9 @@ export default function Home() {
                 e persistente.
               </p>
               <p>
-                Tenho estudado o ecossistema JavaScript pelos
-                últimos 2 anos e estou à procura de uma oportunidade de trabalho
-                em desenvolvimento Web Backend.
+                Tenho estudado o ecossistema JavaScript pelos últimos 2 anos e
+                estou à procura de uma oportunidade de trabalho em
+                desenvolvimento Web Backend.
               </p>
               <h3>NOME</h3>
               <p>Isaac Correia Gonçalves</p>
@@ -152,15 +159,20 @@ export default function Home() {
               </ul>
             </div>
             <div className={styles.avatarWrapper}>
-              <img className={styles.avatar} src="/avatar.png" />
-              <a
-                href="\Curriculos\Curiculo_Isaac_Correia_Gonçalves_v2.6.pdf"
-                download="Isaac Correia Gonçalves - Curriculo.pdf"
-                className={styles.downloadCVButton}
-              >
-                DOWNLOAD CV
-              </a>
-              <img className={styles.backGroundImg} src="/developer.svg" />
+              <div className={styles.avatar}>
+                <Image src={avatar} />
+              </div>
+              <button className={styles.downloadCVButton}>
+                <Link
+                  download="Isaac Correia Gonçalves - Curriculo.pdf"
+                  href="\Curriculos\Curiculo_Isaac_Correia_Gonçalves_v2.6.pdf"
+                >
+                  Download CV
+                </Link>
+              </button>
+              <div className={styles.image}>
+                <Image src={image} />
+              </div>
             </div>
           </div>
         </div>
@@ -171,7 +183,7 @@ export default function Home() {
         <div className="contactSection"></div>
       </main>
       <footer className={styles.footer}>
-        <a>Powered by Isaac</a>
+        <p>Powered by Isaac</p>
       </footer>
     </div>
   );
