@@ -28,18 +28,22 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
 
-  @media (max-width: 1210px) {
-    grid-template-columns: 1fr 1fr;
+
+
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(1, 1fr);
   }
+
 }
 .profile {
   flex: 1 1 100%;
   width: 300px;
   margin: 0 1rem 2rem 0;
-
+  justify-self: center;
   h3 {
     letter-spacing: 0.2rem;
     font-size: 1.25rem;
