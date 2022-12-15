@@ -6,7 +6,7 @@ import Header from "../Header";
 
 import MediaLinks from "../MediaLinks";
 
-import Projects from "./projects";
+import Projects from "./Projects";
 
 import Link from "next/link";
 
