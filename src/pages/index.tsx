@@ -1,9 +1,13 @@
 import styles from "../styles/Home.module.scss";
 import { Progress } from "react-sweet-progress";
 import "react-sweet-progress/lib/style.css";
+
 import Header from "../Header";
+
 import MediaLinks from "../MediaLinks";
+
 import Projects from "./projects";
+
 import Link from "next/link";
 
 import Image from "next/image";
