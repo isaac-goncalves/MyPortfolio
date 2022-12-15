@@ -4,18 +4,17 @@ import styles from "./styles.module.scss";
 
 import Image from "next/image";
 
-export default function index() {
+const getPokemonImage = (id) => {
+  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+};
+
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
+export default function Project2() {
   const [pokemons, setPokemons] = useState([]);
   //   const [teste, setTeste] = useState("3");
-
-  const getPokemonImage = (id) => {
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
-  };
-
-  const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
-
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
       .then((response) => response.json())
