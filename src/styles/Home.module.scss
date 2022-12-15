@@ -5,13 +5,12 @@
 
 /* make two colums in the same row */
 .main {
- display: flex;
- flex-direction: column;
- justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .startSection {
- 
   display: flex;
   padding-top: 5rem;
   justify-content: center;
@@ -28,8 +27,6 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
 
-
-
   @media (max-width: 1300px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -37,7 +34,6 @@
   @media (max-width: 900px) {
     grid-template-columns: repeat(1, 1fr);
   }
-
 }
 .profile {
   flex: 1 1 100%;
