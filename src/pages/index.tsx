@@ -160,7 +160,7 @@ export default function Home() {
             </div>
             <div className={styles.avatarWrapper}>
               <div className={styles.avatar}>
-                <Image src={avatar} />
+                <Image src={avatar} alt="Isaac Correia Gonçalves" />
               </div>
               <button className={styles.downloadCVButton}>
                 <Link
@@ -171,7 +171,7 @@ export default function Home() {
                 </Link>
               </button>
               <div className={styles.image}>
-                <Image src={image} />
+                <Image src={image} alt="Isaac Correia Gonçalves" />
               </div>
             </div>
           </div>
