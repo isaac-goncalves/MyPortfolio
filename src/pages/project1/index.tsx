@@ -1,7 +1,7 @@
-
 import { useState } from "react";
 import styles from "./styles.module.scss";
 import randomcolor from "randomcolor";
+import Link from "next/link";
 
 function App() {
   const [circles, setCircles] = useState([]);
@@ -61,12 +61,16 @@ function App() {
         </svg>
       </div>
       <div className={styles.buttons}>
-      <button className={styles.button} onClick={deleteCircle}>Undo</button>
-      <button className={styles.button} onClick={restoreCircle}>Redo</button>
+        <button className={styles.button} onClick={deleteCircle}>
+          Undo
+        </button>
+        <button className={styles.button} onClick={restoreCircle}>
+          Redo
+        </button>
       </div>
-      <a href="/">
-      <button className={styles.home_button}>Voltar para pagina inicial</button>
-      </a>
+      <button className={styles.home_button}>
+        <Link href="/">Voltar para pagina inicial </Link>
+      </button>
     </div>
   );
 }
