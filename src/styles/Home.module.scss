@@ -1,41 +1,46 @@
 .container {
+  
+  
   background-color: #111;
 
+  
   /* make two colums in the same row */
-
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  
   .startSection {
     padding-top: 5rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 70%;
+    
   }
-
+  
   .content {
+    
+    margin-top: 2rem;
     display: grid;
+    margin: 0 5rem;
     padding: 1rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:  1fr 1fr 1fr ;
     grid-gap: 1rem;
-    max-width: 1180px;
-
-    @media (max-width: 1140px) {
+    width: 70%;
+    
+    
+    @media (max-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
     }
-
-    @media (max-width: 790px) {
+    
+    @media (max-width: 480px) {
       grid-template-columns: repeat(1, 1fr);
-    }
+  }
+  
 
-    .profile {
-      flex: 1 1 100%;
-      width: 300px;
-      margin: 0 1rem 1rem 0;
-      justify-self: center;
+
+}
+.profile {
+  flex: 1 1 100%;
+  width: 300px;
+  margin: 0 1rem 2rem 0;
 
       h3 {
         letter-spacing: 0.2rem;
@@ -171,6 +176,7 @@
     cursor: pointer;
     color: rgb(100, 255, 218);
 
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  }
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
 }
