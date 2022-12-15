@@ -25,31 +25,33 @@ export default function Project2() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Pokedex</h1>
-      <div className={styles.cardContainer}>
-        {pokemons.map((pokemon) => {
-          return (
-            <div className={styles.card} key={pokemon.name}>
-              <h1 className={styles.cardTitle}>
-                {" "}
-                {capitalizeFirstLetter(pokemon.name)}
-              </h1>
-              <div className={styles.image}>
-                <Image
-                  width={200}
-                  height={200}
-                  src={getPokemonImage(
-                    pokemon.url.split("/")[pokemon.url.split("/").length - 2]
-                  )}
-                  alt=""
-                />
+    <>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Pokedex</h1>
+        <div className={styles.cardContainer}>
+          {pokemons.map((pokemon) => {
+            return (
+              <div className={styles.card} key={pokemon.name}>
+                <h1 className={styles.cardTitle}>
+                  {" "}
+                  {capitalizeFirstLetter(pokemon.name)}
+                </h1>
+                <div className={styles.image}>
+                  <Image
+                    width={200}
+                    height={200}
+                    src={getPokemonImage(
+                      pokemon.url.split("/")[pokemon.url.split("/").length - 2]
+                    )}
+                    alt={pokemon.name}
+                  />
+                </div>
+                <p>teste</p>
               </div>
-              <p>teste</p>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
