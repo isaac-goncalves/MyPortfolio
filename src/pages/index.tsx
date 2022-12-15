@@ -1,20 +1,9 @@
 import styles from "../styles/Home.module.scss";
 import { Progress } from "react-sweet-progress";
 import "react-sweet-progress/lib/style.css";
-
 import Header from "../Header";
-
 import MediaLinks from "../MediaLinks";
-
 import Projects from "./Projects";
-
-import Link from "next/link";
-
-import Image from "next/image";
-
-import avatar from "public/avatar.png";
-
-import image from "public/developer.svg";
 
 export default function Home() {
   return (
@@ -30,9 +19,9 @@ export default function Home() {
                 e persistente.
               </p>
               <p>
-                Tenho estudado o ecossistema JavaScript pelos últimos 2 anos e
-                estou à procura de uma oportunidade de trabalho em
-                desenvolvimento Web Backend.
+                Tenho estudado o ecossistema JavaScript pelos
+                últimos 2 anos e estou à procura de uma oportunidade de trabalho
+                em desenvolvimento Web Backend.
               </p>
               <h3>NOME</h3>
               <p>Isaac Correia Gonçalves</p>
@@ -163,20 +152,15 @@ export default function Home() {
               </ul>
             </div>
             <div className={styles.avatarWrapper}>
-              <div className={styles.avatar}>
-                <Image src={avatar} alt="Isaac Correia Gonçalves" />
-              </div>
-              <button className={styles.downloadCVButton}>
-                <Link
-                  download="Isaac Correia Gonçalves - Curriculo.pdf"
-                  href="\Curriculos\Curiculo_Isaac_Correia_Gonçalves_v2.6.pdf"
-                >
-                  Download CV
-                </Link>
-              </button>
-              <div className={styles.image}>
-                <Image src={image} alt="Isaac Correia Gonçalves" />
-              </div>
+              <img className={styles.avatar} src="/avatar.png" />
+              <a
+                href="\Curriculos\Curiculo_Isaac_Correia_Gonçalves_v2.6.pdf"
+                download="Isaac Correia Gonçalves - Curriculo.pdf"
+                className={styles.downloadCVButton}
+              >
+                DOWNLOAD CV
+              </a>
+              <img className={styles.backGroundImg} src="/developer.svg" />
             </div>
           </div>
         </div>
@@ -187,7 +171,7 @@ export default function Home() {
         <div className="contactSection"></div>
       </main>
       <footer className={styles.footer}>
-        <p>Powered by Isaac</p>
+        <a>Powered by Isaac</a>
       </footer>
     </div>
   );
