@@ -46,7 +46,26 @@ export default function Project2() {
                     alt={pokemon.name}
                   />
                 </div>
-                <p>teste</p>
+                <div className={styles.roudedCard}>
+                  <p>Peso: </p>
+                  <p></p>
+                  <p>teste</p>
+                  <p>Tipo</p>
+                  <div className={styles.badges_container}>
+                    <img
+                      className={styles.badge}
+                      src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge"
+                    />
+                    <img
+                      className={styles.badge}
+                      src="https://img.shields.io/badge/-Axios-E6E6FA?logo=axios&logoColor=black&style=for-the-badge"
+                    />
+                    <img
+                      className={styles.badge}
+                      src="https://img.shields.io/badge/-Saas-Bf4080?logo=sass&logoColor=white&style=for-the-badge"
+                    />
+                  </div>
+                </div>
               </div>
             );
           })}
