@@ -47,11 +47,12 @@ export default function Project2() {
                   />
                 </div>
                 <div className={styles.roudedCard}>
-                  <p>Peso: </p>
-                  <p></p>
-                  <p>teste</p>
-                  <p>Tipo</p>
+                  <p><strong>Peso:</strong> 10kg</p>
+                  <p><strong>Altura:</strong> 1.6m</p>
+                  <p><strong>Experiência:</strong> 2600xp</p>
+                  <p><strong>Habilidades:</strong> chicote de vinha, pó do sono, bomba de semente</p>
                   <div className={styles.badges_container}>
+                    <p className={styles.badgeTitle}>Tipo:</p>
                     <img
                       className={styles.badge}
                       src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge"
