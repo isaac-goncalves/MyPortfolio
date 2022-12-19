@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
 
-export default function index(typesProp) {
+import Image from "next/image";
+
+export default function Badges(typesProp) {
+
   const [types, setTypes] = useState([]);
 
   useEffect(() => {
@@ -75,10 +78,15 @@ export default function index(typesProp) {
               color = "gray";
           }
           return (
-            <img
-              className={styles.badge}
-              src={`https://img.shields.io/badge/-${type.type.name}-${color}?logo=react&logoColor=white&style=for-the-badge`}
-            />
+            <div key={type} className={styles.badge}>
+              <Image
+                src={`https://img.shields.io/badge/-${type.type.name}-${color}?logo=react&logoColor=white&style=for-the-badge`}
+                alt="Pokemon Type"
+                width={100}
+                height={30}
+                
+              />
+            </div>
           );
         })}
       </div>
