@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
 
-export default function Index(typesProp) {
-
+export default function index(typesProp) {
   const [types, setTypes] = useState([]);
 
   useEffect(() => {
