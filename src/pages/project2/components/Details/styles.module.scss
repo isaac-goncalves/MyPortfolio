@@ -1,11 +1,34 @@
 .habilities {
- 
   width: fit-content;
   padding-right: 25px;
   text-align: center;
-  background-color: #99FFFF;
+  background-color: #99ffff;
   border-radius: 0 10px 0 10px;
-    margin: 0 auto;
-    margin-top: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
   text-align: center;
+}
+
+.progress {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressBar {
+  width: 70%;
+  margin-left: 1rem;
+}
+.progressContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.progressTitle{
+  margin-left: 1rem;
 }

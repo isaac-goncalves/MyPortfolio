@@ -4,6 +4,10 @@ import styles from "./styles.module.scss";
 
 import Image from "next/image";
 
+const getPokemonImage = (type, color) => {
+  return `https://img.shields.io/badge/-${type}-${color}?logo=react&logoColor=white&style=flat`;
+};
+
 export default function Badges(typesProp) {
 
   const [types, setTypes] = useState([]);
@@ -80,11 +84,10 @@ export default function Badges(typesProp) {
           return (
             <div key={type} className={styles.badge}>
               <Image
-                src={`https://img.shields.io/badge/-${type.type.name}-${color}?logo=react&logoColor=white&style=for-the-badge`}
+                src={getPokemonImage(type.type.name, color)}
                 alt="Pokemon Type"
-                width={100}
-                height={30}
-                
+                width={80}
+                height={28}
               />
             </div>
           );

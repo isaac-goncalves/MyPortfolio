@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from "react";
 
+import { Progress } from "react-sweet-progress";
+
 import Badges from "../Badges";
+
+import "react-sweet-progress/lib/style.css";
+
 import styles from "./styles.module.scss";
+
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
 
 function DetailsPart(url) {
   const [pokemonAbilities, setPokemonAbilities] = useState([]);
@@ -9,8 +18,9 @@ function DetailsPart(url) {
   const [pokemonHeight, setPokemonHeight] = useState([]);
   const [pokemonExperience, setPokemonExperience] = useState([]);
   const [pokemonTypes, setPokemonTypes] = useState([]);
-
-  useEffect(() => {
+  const [pokemonStats, setPokemonStats] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect( () => {
     // console.log(url);
     fetch(url.url)
       .then((response) => response.json())
@@ -19,13 +29,73 @@ function DetailsPart(url) {
         setPokemonWeight(data.weight);
         setPokemonHeight(data.height);
         setPokemonExperience(data.base_experience);
-        // console.log(data.types);
         setPokemonTypes(data.types);
+        setPokemonStats(data.stats);
+        console.log(data);
+        setLoading(false);
       });
-  }, [url]);
-  
+  }, [url,pokemonAbilities,pokemonWeight,pokemonHeight,pokemonExperience,pokemonTypes,pokemonStats]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
   return (
-    <>
+    <div className={styles.container}>
+      <div className={styles.progress}>
+        <div className={styles.progressContainer}>
+          <p>HP</p>
+          <Progress
+            className={styles.progressBar}
+            theme={{
+              active: {
+                symbol: String(pokemonStats[0].base_stat),
+                color: "rgb(143 53 53)",
+              },
+            }}
+            percent={(pokemonStats[0].base_stat * 100) / 251}
+          />
+        </div>
+        <div className={styles.progressContainer}>
+          <p>ATK</p>
+          <Progress
+            className={styles.progressBar}
+            theme={{
+              active: {
+                symbol: String(pokemonStats[1].base_stat),
+                color: "rgb(254,167,37)",
+              },
+            }}
+            percent={(pokemonStats[1].base_stat * 100) / 135}
+          />
+        </div>
+        <div className={styles.progressContainer}>
+          <p>DEF</p>
+          <Progress
+            className={styles.progressBar}
+            theme={{
+              active: {
+                symbol: String(pokemonStats[2].base_stat),
+                color: "rgb(3,145,238)",
+              },
+            }}
+            percent={(pokemonStats[2].base_stat * 100) / 161}
+          />
+        </div>
+        <div className={styles.progressContainer}>
+          <p>SPD</p>
+          <Progress
+            className={styles.progressBar}
+            theme={{
+              active: {
+                symbol: String(pokemonStats[3].base_stat),
+                color: "rgb(144,175,197)",
+              },
+            }}
+            percent={(pokemonStats[3].base_stat * 100) / 155}
+          />
+        </div>
+      </div>
       <div>
         <p>
           <strong>Peso: </strong>
@@ -43,13 +113,13 @@ function DetailsPart(url) {
           <strong>Habilidades: </strong>
           {pokemonAbilities.map((pokemonAbility) => {
             return (
-              <p className={styles.habilities}>{pokemonAbility.ability.name}</p>
+              <p key={pokemonAbility} className={styles.habilities}>{capitalizeFirstLetter(pokemonAbility.ability.name)}</p>
             );
           })}
         </p>
-        <Badges types={pokemonTypes}/>
+        <Badges types={pokemonTypes} />
       </div>
-    </>
+    </div>
   );
 }
 
