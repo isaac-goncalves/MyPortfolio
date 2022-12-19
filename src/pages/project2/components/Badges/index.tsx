@@ -8,7 +8,7 @@ export default function index(typesProp) {
   useEffect(() => {
     console.log(typesProp.types);
     setTypes(typesProp.types);
-  }, [types]);
+  }, [typesProp]);
 
   return (
     <>
@@ -74,7 +74,6 @@ export default function index(typesProp) {
             default:
               color = "gray";
           }
-
           return (
             <img
               className={styles.badge}

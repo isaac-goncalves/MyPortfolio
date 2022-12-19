@@ -15,14 +15,15 @@ function DetailsPart(url) {
     fetch(url.url)
       .then((response) => response.json())
       .then((data) => {
-        setPokemonTypes(data.types);
         setPokemonAbilities(data.abilities);
         setPokemonWeight(data.weight);
         setPokemonHeight(data.height);
         setPokemonExperience(data.base_experience);
         // console.log(data.types);
+        setPokemonTypes(data.types);
       });
   }, [url]);
+  
   return (
     <>
       <div>
