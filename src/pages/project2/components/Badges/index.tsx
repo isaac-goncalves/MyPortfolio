@@ -7,7 +7,7 @@ export default function Index(typesProp) {
   const [types, setTypes] = useState([]);
 
   useEffect(() => {
-    console.log(typesProp.types);
+    // console.log(typesProp.types);
     setTypes(typesProp.types);
   }, [typesProp]);
 
