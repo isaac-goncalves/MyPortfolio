@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
 import Image from "next/image";
-import internal from "stream";
 
 import DetailsPart from "./components/Details";
 
