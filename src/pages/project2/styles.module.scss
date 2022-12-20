@@ -41,10 +41,10 @@
     background-color: var(--gray-80090);
 
     transition: all 0.7s;
-    box-shadow: 0 5px 10px 4px rgba(0, 255, 255, 0.7);
+    box-shadow: 0 5px 10px 4px rgb(187, 134, 252);
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px 8px rgba(0, 255, 255, 0.7);
+      box-shadow: 0 10px 20px 8px rgb(187, 134, 252);
     }
 
     p {
