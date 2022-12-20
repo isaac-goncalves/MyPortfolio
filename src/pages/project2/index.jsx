@@ -57,7 +57,7 @@ export default function Project2() {
                     <DetailsPart url={pokemon.url} />
                   </div>
                 </div>
-              );
+              )
             })}
         </div>
       </div>

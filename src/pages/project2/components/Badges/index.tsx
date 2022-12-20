@@ -20,7 +20,10 @@ export default function Badges(typesProp) {
   return (
     <>
       <div className={styles.badges_container}>
-        <p className={styles.badgeTitle}>Tipo: </p>
+        <p className={styles.badgeTitle}><strong>
+          Tipo: 
+          </strong>
+          </p>
         {types.map((type) => {
           let color = "";
           switch (type.type.name) {

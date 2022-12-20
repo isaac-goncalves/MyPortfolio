@@ -20,7 +20,7 @@ function DetailsPart(url) {
   const [pokemonTypes, setPokemonTypes] = useState([]);
   const [pokemonStats, setPokemonStats] = useState([]);
   const [loading, setLoading] = useState(true);
-  useEffect( () => {
+  useEffect(() => {
     // console.log(url);
     fetch(url.url)
       .then((response) => response.json())
@@ -34,7 +34,7 @@ function DetailsPart(url) {
         console.log(data);
         setLoading(false);
       });
-  }, [url,pokemonAbilities,pokemonWeight,pokemonHeight,pokemonExperience,pokemonTypes,pokemonStats]);
+  }, [url, pokemonAbilities, pokemonWeight, pokemonHeight, pokemonExperience, pokemonTypes, pokemonStats]);
 
   if (loading) {
     return <p>Loading...</p>;
@@ -44,7 +44,7 @@ function DetailsPart(url) {
     <div className={styles.container}>
       <div className={styles.progress}>
         <div className={styles.progressContainer}>
-          <p>HP</p>
+          <p className={styles.progressTitle}>HP</p>
           <Progress
             className={styles.progressBar}
             theme={{
@@ -57,7 +57,7 @@ function DetailsPart(url) {
           />
         </div>
         <div className={styles.progressContainer}>
-          <p>ATK</p>
+          <p className={styles.progressTitle}>ATK</p>
           <Progress
             className={styles.progressBar}
             theme={{
@@ -70,7 +70,7 @@ function DetailsPart(url) {
           />
         </div>
         <div className={styles.progressContainer}>
-          <p>DEF</p>
+          <p className={styles.progressTitle}>DEF</p>
           <Progress
             className={styles.progressBar}
             theme={{
@@ -83,7 +83,7 @@ function DetailsPart(url) {
           />
         </div>
         <div className={styles.progressContainer}>
-          <p>SPD</p>
+          <p className={styles.progressTitle}>SPD</p>
           <Progress
             className={styles.progressBar}
             theme={{
@@ -96,29 +96,33 @@ function DetailsPart(url) {
           />
         </div>
       </div>
-      <div>
-        <p>
-          <strong>Peso: </strong>
-          {pokemonWeight / 10 + " kg"}
-        </p>
-        <p>
-          <strong>Altura: </strong>
-          {pokemonHeight / 10 + " m"}
-        </p>
-        <p>
-          <strong>Experiência: </strong>
-          {pokemonExperience + " xp"}
-        </p>
-        <p>
-          <strong>Habilidades: </strong>
-          {pokemonAbilities.map((pokemonAbility) => {
-            return (
-              <p key={pokemonAbility} className={styles.habilities}>{capitalizeFirstLetter(pokemonAbility.ability.name)}</p>
-            );
-          })}
-        </p>
-        <Badges types={pokemonTypes} />
+      <div className={styles.detailsWrapper}>
+        <div>
+          <p>
+            <strong>Peso: </strong>
+            {pokemonWeight / 10 + "Kg"}
+          </p>
+          <p>
+            <strong>Altura: </strong>
+            {pokemonHeight / 10 + "m"}
+          </p>
+          <p>
+            <strong>Experiência: </strong>
+            {pokemonExperience + " XP"}
+          </p>
+        </div>
+        <div>
+          <p>
+            <strong>Habilidades: </strong>
+            {pokemonAbilities.map((pokemonAbility) => {
+              return (
+                <p key={pokemonAbility} className={styles.habilities}>{capitalizeFirstLetter(pokemonAbility.ability.name)}</p>
+              );
+            })}
+          </p>
+        </div>
       </div>
+      <Badges types={pokemonTypes} />
     </div>
   );
 }
