@@ -4,6 +4,10 @@ import "react-sweet-progress/lib/style.css";
 import Header from "../Header";
 import MediaLinks from "../MediaLinks";
 import Projects from "./Projects";
+import Image from 'next/image'
+import avatarImg from 'public/avatar.png'
+import developerImg from 'public/developer.svg'
+
 
 export default function Home() {
   return (
@@ -152,7 +156,15 @@ export default function Home() {
               </ul>
             </div>
             <div className={styles.avatarWrapper}>
-              <img className={styles.avatar} src="/avatar.png" />
+              <div className={styles.avatar}>
+                <Image
+                  src={avatarImg}
+                  alt="Picture of the author"
+                  width={250}
+                  height={250}
+                />
+              </div>
+
               <a
                 href="\Curriculos\Curiculo_Isaac_Correia_Gonçalves_v2.6.pdf"
                 download="Isaac Correia Gonçalves - Curriculo.pdf"
@@ -160,7 +172,14 @@ export default function Home() {
               >
                 DOWNLOAD CV
               </a>
-              <img className={styles.backGroundImg} src="/developer.svg" />
+              <div className={styles.backGroundImg}>
+                <Image
+                  src={developerImg}
+                  alt="Picture of man coding"
+                  width={400}
+                  height={400}
+                />
+              </div>
             </div>
           </div>
         </div>
