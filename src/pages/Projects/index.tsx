@@ -58,7 +58,7 @@ export default function index() {
             </div>
           </div>
         </Link>
-        <Link href="./project2">
+        {/* <Link href="./project2">
           <div className={styles.project}>
             <Image height={500} src={project2} />
             <h1>Pokedex</h1>
@@ -153,7 +153,7 @@ export default function index() {
               />
             </div>
           </div>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
