@@ -58,13 +58,17 @@ export default function index() {
             </div>
           </div>
         </Link>
-        {/* <Link href="./project2">
+        <Link href="./project3">
           <div className={styles.project}>
             <Image height={500} src={project2} />
-            <h1>Pokedex</h1>
+            <h1>Todo List</h1>
             <p>
-              Projeto desenvolvido para testar o consumo de API utilizando{" "}
-              <strong>Next.js.</strong>
+              Projeto desenvolvido para testar o armazenamento no {" "}
+              <strong>LocalStorage </strong>
+              e o uso dos hooks{" "}
+              <strong>UseEffect </strong>
+              e{" "}
+              <strong>UseState</strong>
             </p>
             <div className={styles.badges_container}>
               <img
@@ -82,7 +86,7 @@ export default function index() {
             </div>
           </div>
         </Link>
-        <Link href="./project2">
+        {/* <Link href="./project2">
           <div className={styles.project}>
             <Image height={500} src={project2} />
             <h1>Pokedex</h1>
