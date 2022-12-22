@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
       <title>Portifólio  -  Isaac Gonçalves</title>
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </React.Fragment>
   )
 }
