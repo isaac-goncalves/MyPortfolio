@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import TodoForm from './TodoForm';
-import Todo from './Todo';
+import TodoForm from '../TodoForm';
+import Todo from '../Todo';
 
 import styles from "./styles.module.scss";
 
@@ -45,18 +45,25 @@ function TodoList() {
   return (
     <>
       <div className={styles.formBody}>
-        <h1>TO-DOS</h1>
-        <p>Enter text into the input field to add items to your list.</p>
-        <p>Click the item to mark it as complete.</p>
-        <p>Click the X to remove the item from your list...</p>
-        <TodoForm onSubmit={addTodo} />
-        <Todo
-          todos={todos}
-          completeTodo={completeTodo}
-          removeTodo={removeTodo}
-          updateTodo={updateTodo}
-        />
+        <div className={styles.container}>
+          <div className={styles.header}>
+            <h1>TO-DOS</h1>
+            <div>
 
+              <p>Enter text into the input field to add items to your list.</p>
+              <p>Click the item to mark it as complete.</p>
+              <p>Click the X to remove the item from your list...</p>
+            </div>
+          </div>
+          <TodoForm onSubmit={addTodo} />
+          <Todo
+            todos={todos}
+            completeTodo={completeTodo}
+            removeTodo={removeTodo}
+            updateTodo={updateTodo}
+          />
+
+        </div>
       </div>
     </>
   );
