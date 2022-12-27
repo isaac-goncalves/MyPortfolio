@@ -63,7 +63,7 @@ export default function index() {
         </Link>
         <Link href="./project3">
           <div className={styles.project}>
-            <Image height={200} src={project3} />
+            <Image height={255} src={project3} />
             <h1>Todo List</h1>
             <p>
               Projeto desenvolvido para testar o armazenamento no {" "}
@@ -80,11 +80,7 @@ export default function index() {
               />
               <img
                 className={styles.badge}
-                src="https://img.shields.io/badge/-Axios-E6E6FA?logo=axios&logoColor=black&style=for-the-badge"
-              />
-              <img
-                className={styles.badge}
-                src="https://img.shields.io/badge/-Saas-Bf4080?logo=sass&logoColor=white&style=for-the-badge"
+                src="https://img.shields.io/badge/-LocalStorage-4B0082?logo=docusign&logoColor=white&style=for-the-badge"
               />
             </div>
           </div>
