@@ -10,17 +10,33 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.todoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  label{
+    font-size: 1.5rem;
+    color: white;
+  }
+}
+
+.checkbox {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: black;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .icons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  z-index: 1;
 }
-
-.todoContainer {
-  width: 100%;
-}
-
 .todo_row:hover {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);

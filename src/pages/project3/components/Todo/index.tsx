@@ -24,26 +24,34 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
   }
 
   return todos.map((todo, index) => (
-    <div
-      className={todo.isComplete ? styles.todo_row : styles.todo_row}
-      key={index}
-    >
-      <div className={styles.todoContainer} key={todo.id} onClick={() => completeTodo(todo.id)}>
-        <p>
-          {todo.text}
-        </p>
-      </div>
-      <div className={styles.icons}>
-        <RiCloseCircleLine
-          onClick={() => removeTodo(todo.id)}
+    <>
+      <div
+        className={styles.todo_row}
+        key={todo.id}
+      >
+        <div className={styles.todoContainer} onClick={() => completeTodo(todo.id)}>
+          <input
+            type="checkbox"
+            checked={todo.isComplete}
+            className={styles.checkbox}
+          // onChange={() => completeTodo(todo.id)}
+          />
+          <label className={styles.labeltext}>
+            {todo.text}
+          </label>
+        </div>
+        <div className={styles.icons}>
+          <RiCloseCircleLine
+            onClick={() => removeTodo(todo.id)}
 
-        />
-        <TiEdit
-          onClick={() => setEdit({ id: todo.id, value: todo.text })}
+          />
+          <TiEdit
+            onClick={() => setEdit({ id: todo.id, value: todo.text })}
 
-        />
-      </div>
-    </div>
+          />
+        </div>
+      </div >
+    </>
   ));
 };
 

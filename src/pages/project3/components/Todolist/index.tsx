@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoForm from '../TodoForm';
 import Todo from '../Todo';
 
@@ -6,6 +6,14 @@ import styles from "./styles.module.scss";
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
+
+
+  useEffect(() => {
+    const todoData = localStorage.getItem('todos');
+    if (todoData) {
+      setTodos(JSON.parse(todoData));
+    }
+  }, []);
 
   const addTodo = todo => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
@@ -15,7 +23,13 @@ function TodoList() {
     const newTodos = [todo, ...todos];
 
     setTodos(newTodos);
+
     console.log(...todos);
+
+    localStorage.setItem('todos', JSON.stringify(newTodos));
+
+    console.log(todo, ...todos);
+
   };
 
   const updateTodo = (todoId, newValue) => {
@@ -24,12 +38,20 @@ function TodoList() {
     }
 
     setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+
   };
 
   const removeTodo = id => {
-    const removedArr = [...todos].filter(todo => todo.id !== id);
 
-    setTodos(removedArr);
+    const removeArr = [...todos].filter(todo => todo.id !== id);
+
+    setTodos(removeArr);
+
+    localStorage.setItem('todos', JSON.stringify(removeArr));
+
+
   };
 
   const completeTodo = id => {
@@ -40,6 +62,7 @@ function TodoList() {
       return todo;
     });
     setTodos(updatedTodos);
+    localStorage.setItem('todos', JSON.stringify(updatedTodos));
   };
 
   return (
