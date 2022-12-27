@@ -53,7 +53,6 @@ function TodoList() {
 
     localStorage.setItem('todos', JSON.stringify(removeArr));
 
-
   };
 
   const completeTodo = id => {
