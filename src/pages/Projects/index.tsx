@@ -7,6 +7,9 @@ import styles from "./styles.module.scss";
 import project1 from "public/project1.png";
 
 import project2 from "public/project2.png";
+
+import project3 from "public/project3.png";
+
 import Link from "next/link";
 
 export default function index() {
@@ -60,7 +63,7 @@ export default function index() {
         </Link>
         <Link href="./project3">
           <div className={styles.project}>
-            <Image height={500} src={project2} />
+            <Image height={200} src={project3} />
             <h1>Todo List</h1>
             <p>
               Projeto desenvolvido para testar o armazenamento no {" "}
