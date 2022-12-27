@@ -16,7 +16,7 @@ export default function MediaLinks() {
         <div className={styles.iconLine}></div>
       </div>
       <div className={styles.mailAddressContainer}>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=isaac.correia.2406@gmail.com&su=Contato sobre vaga de developer" className={styles.mailAddress}>isaac.correia.2406@gmail.com</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=isaac.correia.2406@gmail.com&su=Contato sobre vaga de desenvolvedor Web" className={styles.mailAddress}>isaac.correia.2406@gmail.com</a>
         <div className={styles.mailAddressLine}></div>
       </div>
     </>
