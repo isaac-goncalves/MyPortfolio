@@ -6,13 +6,15 @@ import styles from "./styles.module.scss";
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
+  const [loading, setLoading] = useState(false);
 
 
   useEffect(() => {
     const todoData = localStorage.getItem('todos');
-    if (todoData) {
+    if (todoData) { 
       setTodos(JSON.parse(todoData));
     }
+    setLoading(false);
   }, []);
 
   const addTodo = todo => {
@@ -79,6 +81,7 @@ function TodoList() {
           </div>
           <TodoForm onSubmit={addTodo} />
           <Todo
+            loading={loading}
             todos={todos}
             completeTodo={completeTodo}
             removeTodo={removeTodo}

@@ -5,7 +5,7 @@ import { TiEdit } from 'react-icons/ti';
 
 import styles from "./styles.module.scss";
 
-const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
+const Todo = ({ loading, todos, completeTodo, removeTodo, updateTodo }) => {
   const [edit, setEdit] = useState({
     id: null,
     value: ''
@@ -23,11 +23,13 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
     return <TodoForm edit={edit} onSubmit={submitUpdate} />;
   }
 
+  if(loading) return <div>Loading...</div>
+
   return todos.map((todo, index) => (
     <>
       <div
         className={styles.todo_row}
-        key={todo.id}
+        key={index}
       >
         <div className={styles.todoContainer} onClick={() => completeTodo(todo.id)}>
           <input
