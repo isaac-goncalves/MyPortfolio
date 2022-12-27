@@ -49,7 +49,6 @@ function TodoList() {
           <div className={styles.header}>
             <h1>TO-DOS</h1>
             <div>
-
               <p>Enter text into the input field to add items to your list.</p>
               <p>Click the item to mark it as complete.</p>
               <p>Click the X to remove the item from your list...</p>
@@ -62,7 +61,6 @@ function TodoList() {
             removeTodo={removeTodo}
             updateTodo={updateTodo}
           />
-
         </div>
       </div>
     </>
