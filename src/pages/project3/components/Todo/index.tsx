@@ -20,6 +20,12 @@ const Todo = ({ loading, todos, completeTodo, removeTodo, updateTodo }) => {
     });
   };
 
+  const handleCheckbox = (e) => {
+    console.log(e.target.checked);
+  }
+
+
+
   if (edit.id) {
     return <TodoForm edit={edit} onSubmit={submitUpdate} />;
   }
