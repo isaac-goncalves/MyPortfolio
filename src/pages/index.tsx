@@ -19,13 +19,10 @@ export default function Home() {
             <div className={styles.profile}>
               <h3>PERFIL</h3>
               <p>
-                Programador dedicado, comunicativo, focado, autodidata, curioso
-                e persistente.
+                Sou um programador dedicado e autodidata, com 2 anos de experiência no ecossistema JavaScript.
               </p>
               <p>
-                Tenho estudado o ecossistema JavaScript pelos
-                últimos 2 anos e estou à procura de uma oportunidade de trabalho
-                em desenvolvimento Web Backend.
+                Sou focado, curioso e persistente, buscando sempre aperfeiçoar minhas habilidades e ampliar meus conhecimentos. Estou à procura de uma oportunidade de trabalho em desenvolvimento Web Fullstack, onde possa contribuir para o sucesso da organização.
               </p>
               <h3>NOME</h3>
               <p>Isaac Correia Gonçalves</p>
@@ -48,7 +45,7 @@ export default function Home() {
                         color: "rgb(69 121 255)",
                       },
                     }}
-                    percent={75}
+                    percent={85}
                   />
                 </li>
                 <li className={styles.percent}>
@@ -60,7 +57,7 @@ export default function Home() {
                         color: "rgb(69 121 255)",
                       },
                     }}
-                    percent={75}
+                    percent={65}
                   />
                 </li>
               </ul>
@@ -130,6 +127,19 @@ export default function Home() {
               <h3>SOFT SKILLS</h3>
               <ul>
                 <li className={styles.percent}>
+                  <strong>Resolução de problemas
+                  </strong>
+                  <Progress
+                    theme={{
+                      active: {
+                        symbol: "",
+                        color: "rgb(255 163 69 / 70%)",
+                      },
+                    }}
+                    percent={99}
+                  />
+                </li>
+                <li className={styles.percent}>
                   <strong>Curiosidade</strong>
                   <Progress
                     theme={{
@@ -138,7 +148,7 @@ export default function Home() {
                         color: "rgb(255 163 69 / 70%)",
                       },
                     }}
-                    percent={95}
+                    percent={85}
                   />
                 </li>
                 <li className={styles.percent}>
@@ -150,7 +160,7 @@ export default function Home() {
                         color: "rgb(255 163 69 / 70%)",
                       },
                     }}
-                    percent={85}
+                    percent={75}
                   />
                 </li>
               </ul>
