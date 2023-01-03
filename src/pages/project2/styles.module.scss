@@ -19,10 +19,13 @@
     margin: 1rem;
 
     @media (max-width: 1855px) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @media (max-width: 884px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 400px) {
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -38,7 +41,7 @@
     height: 100%;
     border-radius: 10px 10px 0 0;
 
-   background-color: #303030; 
+    background-color: #303030;
 
     transition: all 0.7s;
     box-shadow: 0 5px 10px 4px rgb(187, 134, 252);

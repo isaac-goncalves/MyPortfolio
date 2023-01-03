@@ -28,15 +28,31 @@ export default function Project2() {
       });
   }, []);
 
+  function handleChange(e) {
+    console.log(e)
+    e.preventDefault();
+    setSearch(e.target.value);
+  }
+
   return (
     <>
       <div className={styles.container}>
         <h1 className={styles.title}>Pokedex</h1>
-        <input onChange={setSearch} type="text" />
-        <button>Search</button>
+        <input
+          onChange={handleChange}
+          type="text"
+          value={search} />
         <div className={styles.cardContainer}>
           {
-            pokemons.map((pokemon) => {
+            pokemons.filter((pokemon) => {
+              if (search === "") {
+                return pokemon;
+              } else if (
+                pokemon.name.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return pokemon;
+              }
+            }).map((pokemon) => {
               return (
                 <div className={styles.card} key={pokemon.name}>
                   <h1 className={styles.cardTitle}>
@@ -63,3 +79,4 @@ export default function Project2() {
     </>
   );
 }
+
