@@ -29,7 +29,6 @@ export default function Project2() {
   }, []);
 
   function handleChange(e) {
-    console.log(e)
     e.preventDefault();
     setSearch(e.target.value);
   }

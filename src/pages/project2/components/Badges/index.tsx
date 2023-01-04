@@ -3,12 +3,20 @@ import React, { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
 import Image from "next/image";
+import { randomFill } from "crypto";
 
 const getPokemonImage = (type, color) => {
   return `https://img.shields.io/badge/-${type}-${color}?logo=react&logoColor=white&style=flat`;
 };
 
 export default function Badges(typesProp) {
+
+  useEffect(() => {
+
+    console.log("testado")
+    console.log(typesProp)
+
+  }, [])
 
   return (
     <>
@@ -78,7 +86,7 @@ export default function Badges(typesProp) {
               color = "gray";
           }
           return (
-            <div key={type} className={styles.badge}>
+            <div key={type.type.url} className={styles.badge}>
               <Image
                 src={getPokemonImage(type.type.name, color)}
                 alt="Pokemon Type"
