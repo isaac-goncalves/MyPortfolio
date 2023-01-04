@@ -11,14 +11,12 @@ const getPokemonImage = (type, color) => {
 
 export default function Badges(typesProp) {
 
-const random = Math.random();
+const [types, setTypes] = useState([]);
 
-  // useEffect(() => {
-
-    
-  //   console.log(typesProp)
-
-  // }, [])
+useEffect(() => {
+  // console.log(typesProp.types);
+  setTypes(typesProp.types);
+}, [typesProp]);
 
   return (
     <>
@@ -27,7 +25,7 @@ const random = Math.random();
           Tipo:
         </strong>
         </p>
-        {typesProp.types.map((type) => {
+        {types.map((type) => {
           let color = "";
           switch (type.type.name) {
             case "grass":

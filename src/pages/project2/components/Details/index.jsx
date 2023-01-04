@@ -31,7 +31,7 @@ function DetailsPart(url) {
         setPokemonExperience(data.base_experience);
         setPokemonTypes(data.types);
         setPokemonStats(data.stats);
-        console.log(data.abilities);
+        // console.log(data.abilities);
         setLoading(false);
       });
   }, [url]);
