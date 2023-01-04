@@ -11,12 +11,14 @@ const getPokemonImage = (type, color) => {
 
 export default function Badges(typesProp) {
 
-  useEffect(() => {
+const random = Math.random();
 
-    console.log("testado")
-    console.log(typesProp)
+  // useEffect(() => {
 
-  }, [])
+    
+  //   console.log(typesProp)
+
+  // }, [])
 
   return (
     <>
@@ -86,7 +88,7 @@ export default function Badges(typesProp) {
               color = "gray";
           }
           return (
-            <div key={type.type.url} className={styles.badge}>
+            <div key={type.type.name} className={styles.badge}>
               <Image
                 src={getPokemonImage(type.type.name, color)}
                 alt="Pokemon Type"

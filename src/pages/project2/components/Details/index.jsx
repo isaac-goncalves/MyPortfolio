@@ -31,10 +31,10 @@ function DetailsPart(url) {
         setPokemonExperience(data.base_experience);
         setPokemonTypes(data.types);
         setPokemonStats(data.stats);
-        // console.log(data);
+        console.log(data.abilities);
         setLoading(false);
       });
-  }, [url, pokemonAbilities, pokemonWeight, pokemonHeight, pokemonExperience, pokemonTypes, pokemonStats]);
+  }, [url]);
 
   if (loading) {
     return <p>Loading...</p>;
