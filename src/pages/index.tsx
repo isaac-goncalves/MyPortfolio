@@ -16,6 +16,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={`${styles.startSection} startSection`}>
           <div className={styles.content}>
+            <div className={styles.detailsWrapper}>
             <div className={styles.profile}>
               <h3>PERFIL</h3>
               <p>
@@ -164,6 +165,7 @@ export default function Home() {
                   />
                 </li>
               </ul>
+            </div>
             </div>
             <div className={styles.avatarWrapper}>
               <div className={styles.avatar}>
