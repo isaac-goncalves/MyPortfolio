@@ -178,7 +178,7 @@ export default function Home() {
               </div>
 
               <a
-                href="\Curriculos\Curiculo_Isaac_Correia_Gonçalves_v2.6.pdf"
+                href="\Curriculos\Curriculo_Isaac_Correia_Gonçalves_v2.8.pdf"
                 download="Isaac Correia Gonçalves - Curriculo.pdf"
                 className={styles.downloadCVButton}
               >
