@@ -26,11 +26,7 @@ function TodoList() {
 
     setTodos(newTodos);
 
-    console.log(...todos);
-
     localStorage.setItem('todos', JSON.stringify(newTodos));
-
-    console.log(todo, ...todos);
 
   };
 

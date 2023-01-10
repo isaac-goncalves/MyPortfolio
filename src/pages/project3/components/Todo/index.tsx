@@ -56,7 +56,6 @@ const Todo = ({ loading, todos, completeTodo, removeTodo, updateTodo }) => {
             />
             <TiEdit
               onClick={() => setEdit({ id: todo.id, value: todo.text })}
-
             />
           </div>
         </div >
