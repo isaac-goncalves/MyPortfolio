@@ -31,7 +31,7 @@ function DetailsPart(url) {
         setPokemonExperience(data.base_experience);
         setPokemonTypes(data.types);
         setPokemonStats(data.stats);
-        // console.log(data.abilities);
+        // console.log(data.abilities);edx8n
         setLoading(false);
       });
   }, [url]);
@@ -54,6 +54,7 @@ function DetailsPart(url) {
               },
             }}
             percent={(pokemonStats[0].base_stat * 100) / 251}
+            style={{ color: "#FFF" }}
           />
         </div>
         <div className={styles.progressContainer}>

@@ -33,6 +33,7 @@
   .card {
     justify-content: space-between;
     display: flex;
+    color: rgb(255, 255, 255);
     flex-direction: column;
     justify-items: space-between;
     grid-template-columns: 1fr, 1fr;
@@ -44,17 +45,17 @@
     background-color: #303030;
 
     transition: all 0.7s;
-    box-shadow: 0 5px 10px 4px rgb(187, 134, 252);
+    box-shadow: 0 5px 10px 4px rgb(75 13 145) ;
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px 8px rgb(187, 134, 252);
+      box-shadow: 0 10px 20px 8px rgb(47, 9, 92);
     }
 
     p {
       font-family: "Roboto", sans-serif;
       font-size: 0.75rem;
       text-align: left;
-      color: black;
+      
     }
 
     .cardTitle {
@@ -79,13 +80,14 @@
     //send to end of div
     padding-top: 3rem;
     display: flex;
+    
     width: 100%;
     height: 100%;
     flex-direction: column;
     border-radius: 40px 40px 0px 0px;
     overflow: hidden;
     align-self: flex-end;
-    background-color: #ffff;
+    background-color: rgb(35,36,35);
     box-shadow:
       /* offset-x | offset-y | blur-radius | spread-radius | color */ 0px
         2px 2px 0px hsla(0, 0%, 0%, 0.14),
