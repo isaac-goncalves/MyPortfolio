@@ -24,13 +24,14 @@ export default function Header() {
                         Projetos
                     </Link>
 
-                    <Link
-                        className={styles.link}
-                        activeClass={styles.active}
-                        smooth spy to="contactSection"
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=isaac.correia.2406@gmail.com&su=Contato sobre vaga de desenvolvedor Web"
+                        
+                        target="_blank" rel="noreferrer" 
+                        
                     >
                         Contato
-                    </Link>
+                    </a>
                 </nav>
             </div>
         </header>
