@@ -6,6 +6,8 @@ import Image from "next/image";
 
 import DetailsPart from "./components/Details";
 
+import logo from "public/Pokedex_logo.png";
+
 const getPokemonImage = (id) => {
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 };
@@ -36,11 +38,20 @@ export default function Project2() {
   return (
     <>
       <div className={styles.container}>
-        <h1 className={styles.title}>Pokedex</h1>
-        <input
-          onChange={handleChange}
-          type="text"
-          value={search} />
+        <div className={styles.header}>
+          <div className={styles.title}>
+          <Image src={logo} 
+          width={150}
+          height={300}
+          alt="Pokedex"
+          // layout="responsive" 
+          />
+          </div>
+          <input
+            onChange={handleChange}
+            type="text"
+            value={search} />
+        </div>
         <div className={styles.cardContainer}>
           {
             pokemons.filter((pokemon) => {

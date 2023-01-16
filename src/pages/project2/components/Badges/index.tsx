@@ -90,8 +90,8 @@ useEffect(() => {
               <Image
                 src={getPokemonImage(type.type.name, color)}
                 alt="Pokemon Type"
-                width={80}
-                height={28}
+                width={100}
+                height={20}
               />
             </div>
           );
