@@ -41,10 +41,9 @@ export default function Project2() {
         <div className={styles.header}>
           <div className={styles.title}>
           <Image src={logo} 
-          width={150}
-          height={300}
+          width={387}
+          height={140}
           alt="Pokedex"
-          // layout="responsive" 
           />
           </div>
           <input

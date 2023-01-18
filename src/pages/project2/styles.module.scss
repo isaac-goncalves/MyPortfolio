@@ -6,11 +6,12 @@
   .header {
     display: flex;
     min-width:950px;
+    align-items: flex-end;
     justify-content: space-between;
-    align-items: center;
-    input {
-      height: 40px;
-    }
+   input{
+    height: 40px;
+   }
+   
   }
 
   .title {
