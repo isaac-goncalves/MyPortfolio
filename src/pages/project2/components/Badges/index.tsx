@@ -161,7 +161,15 @@ export default function Badges(typesProp) {
               {
                 imagem
               }
-              <p>{type.type.name}</p>
+              <p>
+                {type.type.name}
+                <GiFire />
+              <GiFluffyWing />
+              <AiFillFire />
+              <GiPoisonBottle />
+              <RiPlantFill />
+              <AiFillBug/>
+              <GiPsychicWaves/></p>
             </div>
           );
         })}
