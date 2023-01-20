@@ -3,12 +3,24 @@
   align-self: center;
   background-color: gray;
   display: flex;
+  gap: 0.4rem;
   align-items: center;
   justify-content: center;
   width: 6rem;
   height: 2rem;
   border-radius: 8px;
 
+  &-fire {
+    background-color: var(--poison-color);
+  }
+  &-poison {
+    background-color: var(--poison-color);
+  }
+
+  p {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
 }
 .badges_container {
   display: flex;
@@ -18,8 +30,13 @@
   margin-bottom: 0.5rem;
 }
 .badgeTitle {
-//dawdawd
+  strong {
+    font-weight: 600;
+    font-size: 0.90rem;
+    letter-spacing: 1.5px;
+  }
 }
 .progressTitle {
   font-size: 0.5rem;
+ 
 }
