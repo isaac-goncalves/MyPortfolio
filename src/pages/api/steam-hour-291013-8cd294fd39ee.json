@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "steam-hour-291013",
+  "private_key_id": "8cd294fd39eea972f8bc5ac0c8174315bd0737a3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCtMQcMtYgNhLKe\nbR1r0mk1tY4S2DJpBnC66PvNWwsgt3vdxxItyUFxuHb2To1MEqWGtynlk8hojKgV\nWr7IykbzDz1gO1LyleQuNbwrmwm1kK/GC/5VFyh5Lss2UWcmriGqHH8VLLSiwuQI\nMtEnCU9h+J03JVmYs58GKRX4NnT/9eYa4dfTbzLmIW2xvykN30KmonL08dJNiOZx\nq0glaQ4C/KxoKDcmc5N4yDYpDvvP0UNP4h/UCDYxWltiIYrmVV+tUhErcv1fAbw/\nzepwJnv0+yA1ZMf61ftSoqmAzEkVv0IuPSU1L5anCz6SUoacgJmgYReo+J/6IKQ9\nhP8JnPt1AgMBAAECggEAH+jMUnZg1JLKIR/b/5ljGorym/y63vhZjUpvWFDprjO4\nLe6nZgmyVdxFiNCEvosh9b3qCXsuvbqKnnKbe52vMEmyxnfvqrPcuHnci1EzmwEH\nLa9Ygv9zDM7HEKEzZuBG4hOBg5p6xpEvV+Za/Dz+JAAdIUOvrA+OIWGxA0wvRthO\nWQgQnMKoMV5s6cnci/7hrSNZONtkOGZd88Cfg9hHkpHeDWLAZRJG5fyxE5+JTqKh\n2VNBl7zyZdvlWvdyqiwLdShYxCSRyiRJg1XAdXq4qDb0UzrQXXm0hZSuDoseu96i\n+0wr83B4is7Yvt+lUHLuwu+bWZdCxaaPOFaob108KQKBgQDygf6joadbzydNTZPk\nRfhG+mc7tjYSrppxM/zUcaqDeXMuc8309+1P/cDrRFg71lsNmGsRv7W3l0jAn9Nc\nICDWWm3U1nQDObnP6/15CCPrL4fAIU+aGzgPaY08BKdAsEoacysR/Bh8AmBE/7AG\ndVefsXnWbk5VkdcGG4HKw4GWaQKBgQC208VFGy3+g1F9sC+F5Jrh/2SLmxgkWjty\nvfE1hlicziq25qp/1rnz8vOYYJs7bQEwlODVzP1ftdzZ6ko0Zo/WQOwdEir0jftV\n6ZRlD++mrcmnLElM7V6leqcSeUi2xYtmAsfYHIy5Sq0YCMqvAXmRhmpqaepIxtlK\ndCCrDFXTLQKBgQCGMw/iJ3QA52sdaT/dRCc3yBxWu+fCgOMwoA9a1SgCJ7Ro0Wb5\nGDY4XPlkeGbHfkDXDjC6GrgJx+tXxVpmkdT6KgK7lI2Qt2IvQK39S1btMFlUJlrx\nsfxc8xFYVE7mCmiHqJH+Gt7FyV7S8BfOCyOZWNJOqq4oxlMSqygxN+2/eQKBgQCA\nMbN0Bl/Uwz1jtSNNbgMQDmTw4tolu0NN7FNypXYC1SjsQIcyxlxy6lrV8H9IRuF7\nsBiKsYbEEp/+CKLpZTTcFX+5zqBiBCBEmFjeGDOBGwB3gL0Q/KvNulflwzcyOQfK\nio6YQUSHNA50+M0tswoL+UUqwoNtbki0RQMXDLotLQKBgQCmRaraIyt+MD8ZvGD3\nj63YdK3wk45P58Rkaf9SSUDuzlJqpA0e3CnXT/1roIQffsRLwbGKqOzYGJGUxiZA\nz2tOfaoGGanGH7yxqp78FKaULmW4sn0ngHAgWx0ksIFBOqjC4nFIXQEsq2yqXB61\nmrxii0oe1fyNGK2GBFi98QZ60g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "showdomilhao@steam-hour-291013.iam.gserviceaccount.com",
+  "client_id": "102332036886903109634",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/showdomilhao%40steam-hour-291013.iam.gserviceaccount.com"
+}
