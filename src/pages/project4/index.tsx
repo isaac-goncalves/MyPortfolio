@@ -10,23 +10,31 @@ function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
+  const [sessionId, setSessionId] = useState('')
 
-  // useEffect(() => {
-  //   const newmessage = {
-  //     id: 1,
-  //     message: "teste",
-  //     type: 'human',
-  //     time: new Date()
-  //   }
-  //   setMessages([...messages, newmessage])
+  useEffect(() => {
+    async function getSessionId() {
+      const result = await fetch('http://localhost:3030/session', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      })
 
-  // }, [])
+      const data = await result.json()
+      console.log("SessionId gotten from backend is: " + data.sessionId)
+      setSessionId(data.sessionId)
+    }
+
+    getSessionId()
+
+  }, [])
 
   const handleChange = e => {
     setInput(e.target.value);
   };
 
-  function handleNewMessage(e) {
+  async function handleNewMessage(e) {
 
     e.preventDefault();
 
@@ -41,9 +49,22 @@ function index() {
     setMessages([...messages, newmessage])
     setInput('')
 
+    const result = await fetch('http://localhost:3030/message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: input,
+        sessionId: sessionId
+      })
+    })
 
+    const data = await result.json()
 
-    console.log(messages)
+    console.log(data)
+
+    console.log("Requested!!")
   }
 
   return (
@@ -78,8 +99,8 @@ function index() {
             {
               messages.map((message) => {
                 return (<>
-                  <div className={styles.human_message}>
-                    <div key={message.id} >{message.message}</div>
+                  <div key={message.id} className={styles.human_message}>
+                    <div  >{message.message}</div>
                     <div className={styles.message_timestamp}>{format(message.time, 'h:mm a')}</div>
                   </div>
                 </>
