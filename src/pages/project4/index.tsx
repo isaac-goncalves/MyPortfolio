@@ -38,10 +38,7 @@ function index() {
 
     e.preventDefault();
 
-    console.log(input)
-
     const newmessage = {
-      id: 1,
       message: input,
       type: 'human',
       time: new Date()
@@ -49,6 +46,11 @@ function index() {
     setMessages([...messages, newmessage])
     setInput('')
 
+    handleNewMessageFromBot(input)
+
+  }
+
+  async function handleNewMessageFromBot(message) {
     const result = await fetch('http://localhost:3030/message', {
       method: 'POST',
       headers: {
@@ -62,7 +64,16 @@ function index() {
 
     const data = await result.json()
 
-    console.log(data)
+    console.log(data.message)
+
+    const newmessage2 = {
+      message: data.message,
+      type: 'ai',
+      time: new Date()
+    }
+    setMessages([...messages, newmessage2])
+    
+    console.log(messages)
 
     console.log("Requested!!")
   }
@@ -75,14 +86,13 @@ function index() {
             <div className={styles.goback}>
               <IoIosArrowBack size={30} />
             </div>
-            <div className={styles.avatar}>
-              <Image
-                src="/showdomilhao-logo.png"
-                alt="Picture of the author"
-                width={40}
-                height={40}
-              />
-            </div>
+            <Image
+              className={styles.avatar}
+              src="/showdomilhao-logo.png"
+              alt="Picture of the author"
+              width={40}
+              height={40}
+            />
             <p>
               GTP chat
             </p>
@@ -98,13 +108,24 @@ function index() {
             </div>
             {
               messages.map((message) => {
-                return (<>
-                  <div key={message.id} className={styles.human_message}>
-                    <div  >{message.message}</div>
-                    <div className={styles.message_timestamp}>{format(message.time, 'h:mm a')}</div>
-                  </div>
-                </>
-                )
+                if (message.type === 'ai') {
+                  return (<>
+                    <div key={message.id} className={styles.ai_message}>
+                      <div  >{message.message}</div>
+                      <div className={styles.message_timestamp}>{format(message.time, 'h:mm a')}</div>
+                    </div>
+                  </>
+                  )
+                }
+                else {
+                  return (<>
+                    <div key={message.id} className={styles.human_message}>
+                      <div  >{message.message}</div>
+                      <div className={styles.message_timestamp}>{format(message.time, 'h:mm a')}</div>
+                    </div>
+                  </>
+                  )
+                }
               })
             }
           </div>
