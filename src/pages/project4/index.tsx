@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from "./styles.module.scss";
 import { AiOutlineSend } from 'react-icons/ai';
 import { IoIosArrowBack } from 'react-icons/io';
@@ -11,6 +11,11 @@ function index() {
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
   const [sessionId, setSessionId] = useState('')
+  const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   useEffect(() => {
     async function getSessionId() {
@@ -38,26 +43,30 @@ function index() {
 
     e.preventDefault();
 
+    console.log(messages)
+    await handleNewMessageFromBot(input)
+    setInput('')
+
+  }
+
+  async function handleNewMessageFromBot(message) {
+   
     const newmessage = {
       message: input,
       type: 'human',
       time: new Date()
     }
+   
     setMessages([...messages, newmessage])
-    setInput('')
 
-    handleNewMessageFromBot(input)
 
-  }
-
-  async function handleNewMessageFromBot(message) {
     const result = await fetch('http://localhost:3030/message', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        message: input,
+        message: message,
         sessionId: sessionId
       })
     })
@@ -66,13 +75,17 @@ function index() {
 
     console.log(data.message)
 
-    const newmessage2 = {
+    
+
+    const botmessage2 = {
       message: data.message,
       type: 'ai',
       time: new Date()
     }
-    setMessages([...messages, newmessage2])
-    
+
+    setMessages([...messages, newmessage, botmessage2])
+
+
     console.log(messages)
 
     console.log("Requested!!")
@@ -94,16 +107,16 @@ function index() {
               height={40}
             />
             <p>
-              GTP chat
+              Show do Milhão
             </p>
           </div>
           <div className={styles.messages_wrapper}>
-            <div className={styles.human_message}>
+            {/* <div className={styles.human_message}>
               <div >Bom dia chat</div>
               <div className={styles.message_timestamp}>11:34:45</div>
-            </div>
+            </div> */}
             <div className={styles.ai_message}>
-              <div >Boa tarde humano</div>
+              <div>Olá, parar iniciar o jogo inicie uma conversa</div>
               <div className={styles.message_timestamp}>11:34:45</div>
             </div>
             {
@@ -128,6 +141,7 @@ function index() {
                 }
               })
             }
+            <div ref={messagesEndRef} />
           </div>
           <form onSubmit={handleNewMessage}>
             <div className={styles.form_container}>
