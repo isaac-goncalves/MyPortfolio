@@ -16,7 +16,10 @@
     background-color: rgb(48, 49, 54);
 
     .goback {
-      padding: 0 0.1rem;
+      padding: 0 0.5rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
 
     .avatar {
@@ -31,7 +34,6 @@
 
   .messages_container {
     padding: 0;
-   
     border-radius: 12px;
     overflow: hidden;
     background-color: rgb(54, 57, 64);
@@ -40,14 +42,13 @@
 
 .messages_container {
   padding: 2rem;
-  width: 500px;
+  min-width: 32rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
     0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
     0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
-
 }
 
 .messages_wrapper {
@@ -55,7 +56,7 @@
   flex-direction: column;
   height: 700px;
   overflow-y: scroll;
-  
+
   ::-webkit-scrollbar {
     width: 0px;
   }
@@ -86,31 +87,34 @@
 .human_message {
   display: flex;
   margin: 0.5rem;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 0.3rem;
+  padding: 0.8rem;
   align-self: flex-end;
   background-color: rgb(114, 137, 217);
   border-radius: 1rem 1rem 0rem 1rem;
-}
-.message_timestamp {
-  font-size: 0.8rem;
-  color: hwb(226 61% 11%);
-  align-self: flex-end;
-  margin: -10px;
+  .message_timestamp {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    color: hwb(227 69% 24%);
+    margin-bottom: -5px;
+    align-self: flex-end;
+  }
 }
 
 .ai_message {
   margin: 0.5rem;
+  max-width: 26rem;
   align-self: flex-start;
   display: flex;
   margin: 0.5rem;
-  gap: 1rem;
-  padding: 1rem;
-
+  gap: 0.3rem;
+  padding: 0.8rem;
   background-color: rgb(48, 49, 54);
   border-radius: 1rem 1rem 1rem 0;
-  .message_timestamp {
+  .ai_message_timestamp {
     font-size: 0.8rem;
+    white-space: nowrap;
+    margin-bottom: -5px;
     color: rgb(137, 138, 140);
     align-self: flex-end;
   }

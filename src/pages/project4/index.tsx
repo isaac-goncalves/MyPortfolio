@@ -5,6 +5,7 @@ import { AiOutlineSend } from 'react-icons/ai';
 import { IoIosArrowBack } from 'react-icons/io';
 import { format } from 'date-fns';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -50,13 +51,13 @@ function index() {
   }
 
   async function handleNewMessageFromBot(message) {
-   
+
     const newmessage = {
       message: input,
       type: 'human',
       time: new Date()
     }
-   
+
     setMessages([...messages, newmessage])
 
 
@@ -75,7 +76,7 @@ function index() {
 
     console.log(data.message)
 
-    
+
 
     const botmessage2 = {
       message: data.message,
@@ -96,9 +97,12 @@ function index() {
       <div>
         <div className={styles.messages_container}>
           <div className={styles.header}>
-            <div className={styles.goback}>
-              <IoIosArrowBack size={30} />
-            </div>
+            <Link
+              href="/">
+              <div className={styles.goback}>
+                <IoIosArrowBack size={30} />
+              </div>
+            </Link>
             <Image
               className={styles.avatar}
               src="/showdomilhao-logo.png"
@@ -117,7 +121,7 @@ function index() {
             </div> */}
             <div className={styles.ai_message}>
               <div>Olá, parar iniciar o jogo inicie uma conversa</div>
-              <div className={styles.message_timestamp}>11:34:45</div>
+              <div className={styles.ai_message_timestamp}>11:34:45</div>
             </div>
             {
               messages.map((message) => {
@@ -125,7 +129,7 @@ function index() {
                   return (<>
                     <div key={message.id} className={styles.ai_message}>
                       <div  >{message.message}</div>
-                      <div className={styles.message_timestamp}>{format(message.time, 'h:mm a')}</div>
+                      <div className={styles.ai_message_timestamp}>{format(message.time, 'h:mm a')}</div>
                     </div>
                   </>
                   )
