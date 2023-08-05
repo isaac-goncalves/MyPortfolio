@@ -6,6 +6,9 @@
 .pnp.js
 
 # testing
+/src/pages/project4
+
+# testing
 /coverage
 
 # next.js
