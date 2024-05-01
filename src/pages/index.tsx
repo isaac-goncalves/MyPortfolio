@@ -18,11 +18,15 @@ export default function Home() {
             <div className={styles.detailsWrapper}>
               <div className={styles.profile}>
                 <h3>PERFIL</h3>
+
                 <p>
-                  Sou um programador dedicado e autodidata, com 3 anos de experiência no ecossistema JavaScript.
+                  Sou um programador dedicado e autodidata, com 3 anos de experiência no ecossistema JavaScript, especialmente focado no desenvolvimento fullstack.
                 </p>
                 <p>
-                  Sou focado, curioso e persistente, buscando sempre aperfeiçoar minhas habilidades e ampliar meus conhecimentos. Estou à procura de uma oportunidade de trabalho em desenvolvimento Web Fullstack, onde possa contribuir para o sucesso da organização.
+                 Nos últimos 3 anos, desenvolvi habilidades sólidas em desenvolvimento fullstack. Sou experiente em Vanilla JS para frontend e em Node.js com Express.js para backend, criando interfaces interativas, APIs REST robustas e escaláveis. Tenho conhecimento em bancos de dados relacionais, incluindo MySQL e Postgres, e em ferramentas de ORM como TypeORM.
+                </p>
+                <p>
+                  Sou uma pessoa focada, curiosa e persistente, sempre buscando aperfeiçoar minhas habilidades e ampliar meus conhecimentos. Estou à procura de uma oportunidade de trabalho em desenvolvimento Web Fullstack, onde possa aplicar meu conjunto de habilidades para contribuir significativamente para o sucesso da organização.
                 </p>
                 <h3>NOME</h3>
                 <p>Isaac Correia Gonçalves</p>
@@ -48,7 +52,7 @@ export default function Home() {
                       percent={90}
                     />
                   </li>
-                  
+
                   <li className={styles.percent}>
                     <strong>Typescript</strong>
                     <Progress

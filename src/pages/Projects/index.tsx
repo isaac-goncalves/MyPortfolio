@@ -98,51 +98,48 @@ export default function index() {
               para gerenciamento de tarefas em um quadro Kanban utilizando a API da OpenAI.
             </p>
             <div className={styles.badges_container}>
+
               <img
                 className={styles.badge}
-                src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge"
+                src="https://img.shields.io/badge/-Next.js-000000?logo=next.js&logoColor=white&style=for-the-badge"
               />
               <img
                 className={styles.badge}
-                src="https://img.shields.io/badge/-Axios-E6E6FA?logo=axios&logoColor=black&style=for-the-badge"
+                src="https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb&logoColor=white&style=for-the-badge"
               />
               <img
                 className={styles.badge}
-                src="https://img.shields.io/badge/-Saas-Bf4080?logo=sass&logoColor=white&style=for-the-badge"
+                src="https://img.shields.io/badge/-Tailwind CSS-38B2AC?logo=tailwind-css&logoColor=white&style=for-the-badge"
+              />
+
+            </div>
+          </div>
+        </Link>
+        <Link href="https://github.com/isaac-goncalves/gerenciamento-de-salas-V0.1">
+          <div className={styles.project}>
+            <Image height={1300}
+              src={project5} />
+            <h1>SGSA</h1>
+            <p>
+              Projeto desenvolvido para gerenciar salas de aulas e laboratórios utilizando Next.js e PostgreSQL. python green
+            </p>
+            <div className={styles.badges_container}>
+              <img
+                className={styles.badge}
+                src="https://img.shields.io/badge/-Next.js-000000?logo=next.js&logoColor=white&style=for-the-badge"
+              />
+              <img
+                className={styles.badge}
+                src="https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white&style=for-the-badge"
+              />
+              <img
+                className={styles.badge}
+                src="https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor&background=green&color=white&style=for-the-badge"
+
               />
             </div>
           </div>
         </Link>
-
-
-    {/* add sgsa pwoject with gerencia salas de aulas e laboratoriso e usa next e  postgres  */}
-
-
-<Link href="https://github.com/isaac-goncalves/gerenciamento-de-salas-V0.1">
-  <div className={styles.project}>
-    <Image height={1300}
-     src={project5} />
-    <h1>SGSA</h1>
-    <p>
-      Projeto desenvolvido para gerenciar salas de aulas e laboratórios utilizando Next.js e PostgreSQL.
-    </p>
-    <div className={styles.badges_container}>
-      <img
-        className={styles.badge}
-        src="https://img.shields.io/badge/-Next.js-000000?logo=next.js&logoColor=white&style=for-the-badge"
-      />
-      <img
-        className={styles.badge}
-        src="https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white&style=for-the-badge"
-      />
-    </div>
-  </div>
-</Link>
-
-
-
-
-
 
         {/* <Link href="./project2">
           <div className={styles.project}>
