@@ -10,6 +10,10 @@ import project2 from "public/project2.png";
 
 import project3 from "public/project3.png";
 
+import project4 from "public/ai-kanban.png";
+
+import project5 from "public/sgsa.png";
+
 import Link from "next/link";
 
 export default function index() {
@@ -85,6 +89,61 @@ export default function index() {
             </div>
           </div>
         </Link>
+        <Link href="https://my-kanban-ai.vercel.app/">
+          <div className={styles.project}>
+            <Image height={500} src={project4} />
+            <h1>AI Kanban Board</h1>
+            <p>
+              Projeto desenvolvido para testar o uso de inteligência artificial
+              para gerenciamento de tarefas em um quadro Kanban utilizando a API da OpenAI.
+            </p>
+            <div className={styles.badges_container}>
+              <img
+                className={styles.badge}
+                src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge"
+              />
+              <img
+                className={styles.badge}
+                src="https://img.shields.io/badge/-Axios-E6E6FA?logo=axios&logoColor=black&style=for-the-badge"
+              />
+              <img
+                className={styles.badge}
+                src="https://img.shields.io/badge/-Saas-Bf4080?logo=sass&logoColor=white&style=for-the-badge"
+              />
+            </div>
+          </div>
+        </Link>
+
+
+    {/* add sgsa pwoject with gerencia salas de aulas e laboratoriso e usa next e  postgres  */}
+
+
+<Link href="https://sgsa.vercel.app/">
+  <div className={styles.project}>
+    <Image height={1300}
+     src={project5} />
+    <h1>SGSA</h1>
+    <p>
+      Projeto desenvolvido para gerenciar salas de aulas e laboratórios utilizando Next.js e PostgreSQL.
+    </p>
+    <div className={styles.badges_container}>
+      <img
+        className={styles.badge}
+        src="https://img.shields.io/badge/-Next.js-000000?logo=next.js&logoColor=white&style=for-the-badge"
+      />
+      <img
+        className={styles.badge}
+        src="https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white&style=for-the-badge"
+      />
+    </div>
+  </div>
+</Link>
+
+
+
+
+
+
         {/* <Link href="./project2">
           <div className={styles.project}>
             <Image height={500} src={project2} />

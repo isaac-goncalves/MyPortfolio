@@ -5,7 +5,7 @@ import Header from "../Header";
 import MediaLinks from "../MediaLinks";
 import Projects from "./Projects";
 import Image from 'next/image'
-import avatarImg from 'public/avatar.png'
+import avatarImg from 'public/avatar.jpg'
 import developerImg from 'public/developer.svg'
 
 export default function Home() {
