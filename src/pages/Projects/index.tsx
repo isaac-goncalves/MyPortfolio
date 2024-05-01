@@ -118,7 +118,7 @@ export default function index() {
     {/* add sgsa pwoject with gerencia salas de aulas e laboratoriso e usa next e  postgres  */}
 
 
-<Link href="https://sgsa.vercel.app/">
+<Link href="https://github.com/isaac-goncalves/gerenciamento-de-salas-V0.1">
   <div className={styles.project}>
     <Image height={1300}
      src={project5} />
